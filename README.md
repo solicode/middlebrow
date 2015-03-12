@@ -42,17 +42,17 @@ Additionally add one of the following dependencies, depending on which container
 The simplest example illustrating how to use Middlebrow is the following:
 
 ```clojure
-(ns my-app
+(ns my-app.core
   (:require [middlebrow.core :as mb]
-            [middlebrow-fx.core :as fx])
+            [middlebrow-fx.core :as fx]))
 
 (let [window (fx/create-window
-               :url "http://localhost:8000" ; URL to your web app
-               :width 800
-               :height 600
-               :title "My App")]
-  (mb/show window)
-  (mb/activate window))
+			 :url "http://localhost:8000" ; URL to your web app
+			 :width 800
+			 :height 600
+			 :title "My App")]
+   (mb/show window)
+   (mb/activate window))
 ```
 
 The above example uses JavaFX, but you can similarly use SWT or Thrust as well.
