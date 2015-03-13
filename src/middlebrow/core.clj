@@ -1,8 +1,6 @@
 (ns middlebrow.core)
 
 (defprotocol IBrowser
-  (container [self] "Gets the container type as a keyword. Such as `:fx`, `:swt`, `:thrust`, etc.")
-
   (show [self])
   (hide [self])
   (activate [self])
@@ -38,11 +36,10 @@
   (get-url [self])
   (set-url [self url])
 
+  (container-type [self] "Gets the container type as a keyword. Such as `:fx`, `:swt`, `:thrust`, etc.")
+  (start-event-loop [self] [self error-fn])
+
   ; Events
   (listen-closed [self handler])
   (listen-focus-gained [self handler])
   (listen-focus-lost [self handler]))
-
-(defn container-of? [browser & container-ids]
-  (let [c (container browser)]
-    (boolean (some #(= c %) container-ids))))
