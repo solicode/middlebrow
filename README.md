@@ -33,8 +33,13 @@ Additionally add one of the following dependencies, depending on which container
 
 ```clojure
 [net.solicode/middlebrow-fx "0.1.0-SNAPSHOT"]
-[net.solicode/middlebrow-swt "0.1.0-SNAPSHOT"]
 [net.solicode/middlebrow-thrust "0.1.0-SNAPSHOT"]
+[net.solicode/middlebrow-swt.win32.win32.x86 "0.1.0-SNAPSHOT"]
+[net.solicode/middlebrow-swt.win32.win32.x86_64 "0.1.0-SNAPSHOT"]
+[net.solicode/middlebrow-swt.gtk.linux.x86 "0.1.0-SNAPSHOT"]
+[net.solicode/middlebrow-swt.gtk.linux.x86_64 "0.1.0-SNAPSHOT"]
+[net.solicode/middlebrow-swt.cocoa.macosx "0.1.0-SNAPSHOT"]
+[net.solicode/middlebrow-swt.cocoa.macosx.x86_64 "0.1.0-SNAPSHOT"]
 ```
 
 ### Examples
